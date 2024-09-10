@@ -40,7 +40,10 @@ python manage.py migrate
 function from main.views when the corresponding URL '' is accessed. 
 19. I added a URL route into corner_store_inventory/urls.py to direct requests for '' to the main view by adding path('', include('main.urls')) to the urlpatterns variable.
 I also had to import include from django.urls
-20. I performed add, commit, push to my local repository
+20. I performed add, commit, push to my local repository.
+21. I performed deployment of the app on PWS by creating a new project on PWS, saving the project credentials and project command, opening settings.py and adding PWS 
+deployment URL to ALLOWED_HOSTS. I then ran the 3 commands from PWS and logged in using the PWS credentials. I changed the PWS branch name and pushed the changes to PWS.
+
 
 **Create a diagram that contains the request client to a Django-based web application and the response it gives, and explain the 
 relationship between urls.py, views.py, models.py, and the html file**

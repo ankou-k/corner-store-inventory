@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vsh1_i#6xnvf^gdanh(j018k=772hbx^63a^e*de&4@-m*+c8*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "aleksey-panfilov-cornerstoreinventory.pbp.cs.ui.ac.id"]
 
 
 # Application definition
