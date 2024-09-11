@@ -1,5 +1,5 @@
 **PWS link to deployed application**
-
+https://aleksey-panfilov-cornerstoreinventory.pbp.cs.ui.ac.id/
 
 **Implementation of the project**
 1. I started with creatinga folder for my corner store inventory webapp.
@@ -48,7 +48,15 @@ deployment URL to ALLOWED_HOSTS. I then ran the 3 commands from PWS and logged i
 **Create a diagram that contains the request client to a Django-based web application and the response it gives, and explain the 
 relationship between urls.py, views.py, models.py, and the html file**
 
-[Request Client] --> [urls.py] --> [views.py] --> [models.py] --> [HTML File]
+In this diagram, --> means request to new file, and ==> means response to file call
+
+[Request Client] --> [urls.py] --> [views.py] --> [models.py] ==> [views.py] --> [html file] 
+==> [views.py] ==> urls.py ==> [Request Client]
+
+urls.py maps url patterns to views.py for the app main, so that when a specific url is requested, urls.py directs the request to the relevant function in views.py
+views.py processes requests that it receives from urls.py. It requests any relevant data models from models.py, provides any context for a template, and then renders a template with the context.
+models.py defines data models for the app, and gives structure to interactions with the database. It returns the structured model to urls.py when requested.
+html file defines the structure of the information that gets displayed to the user. It populates the html template with the context provided by views.py
 
 **Explain the use of git in software development!**
 Git is used for version control management in projects. Git tracks the changes to files over time, allowing for the user to revert to 
