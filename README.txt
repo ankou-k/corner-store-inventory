@@ -88,9 +88,8 @@ from django.http import HttpResponse
 from django.core import serializers
 9. I created 4 functions in main/views.py to display objects in XML, JSON, XML by ID, and JSON by ID formats
 10. I imported my 4 functions into main/urls.py and added URL paths for each of them in urlpatterns.
-11. I tested the project by running python manage.py runserver
-
-GUID
+11. I tested the project by running 
+python manage.py runserver
 
 **Explain why we need data delivery in implementing a platform.**
 **In your opinion, which is better, XML or JSON? Why is JSON more popular than XML?**
