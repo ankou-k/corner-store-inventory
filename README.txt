@@ -80,13 +80,17 @@ language. It aligns the code with the database structures.
 2. I opened views.py and made a function that creates a form which automatically saves the data submitted to the form
 3. I added product objects to the main view so that they display on the homepage
 4. I added my product function to urlpatterns in main/urls.py
-5. I added 2 imports to main/views.py in order to work with XML and JSON data easily
+5. I created base.html in main/templates/ to ensure consistent design of my views, and I added {% extends 'base.html' %} to main/templates/main.html
+6. I made base.html detectable as a template file by changing the templates variable in settings.py
+7. I created an html file named create_product_entry.html in main/templates that will act as the product entry form.
+8. I added 2 imports to main/views.py in order to work with XML and JSON data easily
 from django.http import HttpResponse
 from django.core import serializers
-6. I created 4 functions in main/views.py to display objects in XML, JSON, XML by ID, and JSON by ID formats
-7. I imported my 4 functions into main/urls.py and added URL paths for each of them in urlpatterns.
-8. I created base.html in main/templates/ to ensure consistent design of my views, and I added {% extends 'base.html' %} to main/templates/main.html
-9. I made base.html detectable as a template file by changing the templates variable in settings.py
+9. I created 4 functions in main/views.py to display objects in XML, JSON, XML by ID, and JSON by ID formats
+10. I imported my 4 functions into main/urls.py and added URL paths for each of them in urlpatterns.
+11. I tested the project by running python manage.py runserver
+
+GUID
 
 **Explain why we need data delivery in implementing a platform.**
 **In your opinion, which is better, XML or JSON? Why is JSON more popular than XML?**
