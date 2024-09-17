@@ -74,3 +74,21 @@ computer science students already have some familiarity with python, it is easie
 **Why is django model called ORM?**
 ORM stands for Object-Relational Mapping. It is named that because it maps data between a relational database and an object-oriented 
 language. It aligns the code with the database structures.
+
+**Implementation of part 2**
+1. I created file forms.py in the main directory, I imported Product model from main/models.py and I created a product entry form that allows to add a model object
+2. I opened views.py and made a function that creates a form which automatically saves the data submitted to the form
+3. I added product objects to the main view so that they display on the homepage
+4. I added my product function to urlpatterns in main/urls.py
+5. I added 2 imports to main/views.py in order to work with XML and JSON data easily
+from django.http import HttpResponse
+from django.core import serializers
+6. I created 4 functions in main/views.py to display objects in XML, JSON, XML by ID, and JSON by ID formats
+7. I imported my 4 functions into main/urls.py and added URL paths for each of them in urlpatterns.
+8. I created base.html in main/templates/ to ensure consistent design of my views, and I added {% extends 'base.html' %} to main/templates/main.html
+9. I made base.html detectable as a template file by changing the templates variable in settings.py
+
+**Explain why we need data delivery in implementing a platform.**
+**In your opinion, which is better, XML or JSON? Why is JSON more popular than XML?**
+**Explain the functional usage of is_valid() method in Django forms. Also explain why we need the method in forms.**
+**Why do we need csrf_token when creating a form in Django? What could happen if we did not use csrf_token on a Django form? How could this be leveraged by an attacker?**
