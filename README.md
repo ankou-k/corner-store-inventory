@@ -109,3 +109,9 @@ not meet the database requirements and cannot be saved. Having validation before
 The csrf_token is used for the server to ensure that a request is sent by an authenticated user. If we did not use the csrf_token for the form, the server would not check whether the form data is being submitted by an authenticated user 
 or by an attacker trying to put malicious data into the database. An attacker could levarege a user's authenticated session by submitting forms on their behalf that perform actions that will harm the user, such as transferring funds or 
 changing account details, potentially leading to severe security breaches and data loss.
+
+**Postman Screenshots**
+![ScreenShot](postman_xml.PNG)
+![ScreenShot](postman_json.PNG)
+![ScreenShot](postman_xml_id.PNG)
+![ScreenShot](postman_json_id.PNG)
