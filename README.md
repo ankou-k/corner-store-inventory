@@ -111,7 +111,11 @@ or by an attacker trying to put malicious data into the database. An attacker co
 changing account details, potentially leading to severe security breaches and data loss.
 
 **Postman Screenshots**
+XML
 ![ScreenShot](postman_xml.PNG)
+JSON
 ![ScreenShot](postman_json.PNG)
+XML by ID
 ![ScreenShot](postman_xml_id.PNG)
+JSON by ID
 ![ScreenShot](postman_json_id.PNG)
