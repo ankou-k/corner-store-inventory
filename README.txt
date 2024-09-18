@@ -80,7 +80,7 @@ language. It aligns the code with the database structures.
 2. I opened views.py and made a function that creates a form which automatically saves the data submitted to the form
 3. I added product objects to the main view so that they display on the homepage
 4. I added my product function to urlpatterns in main/urls.py
-5. I created base.html in main/templates/ to ensure consistent design of my views, and I added {% extends 'base.html' %} to main/templates/main.html
+5. I created base.html in templates/ to ensure consistent design of my views, and I added {% extends 'base.html' %} to main/templates/main.html
 6. I made base.html detectable as a template file by changing the templates variable in settings.py
 7. I created an html file named create_product_entry.html in main/templates that will act as the product entry form.
 8. I added 2 imports to main/views.py in order to work with XML and JSON data easily
@@ -92,6 +92,20 @@ from django.core import serializers
 python manage.py runserver
 
 **Explain why we need data delivery in implementing a platform.**
+We need data delivery to ensure our platform can provide users with the information and services they need by securely and efficinetly saving, loading, storing, and processing data. 
+Without data delivery, the lack of good data management and data processing would make the platform unreliable, cause security issues, and have other problems.
+
 **In your opinion, which is better, XML or JSON? Why is JSON more popular than XML?**
+In my opinion, writing JSON is less error prone than XML, because JSON doesn't require words for structuring the data, only symbols. 
+Hence, I think JSON is better, because it is easier to avoid bugs that were caused by a typo. JSON is more popular than XML because the syntax, while being more readable, is also faster to generate. It is more lightweight than XML
+and is native to Javascript apps.
+
 **Explain the functional usage of is_valid() method in Django forms. Also explain why we need the method in forms.**
+is_valid() method validates each field of the form, such as whether a required field is null or has the wrong datatype. It returns true or false depending on whether the data is valid. 
+We need this method in forms because our form is meant to save data to our database. If there are errors in the data which is being saved to the database, we will get a lot of errors because the data does 
+not meet the database requirements and cannot be saved. Having validation before saving to database allows the user to fix mistakes in form data sooner, and makes the webapp more efficient.
+
 **Why do we need csrf_token when creating a form in Django? What could happen if we did not use csrf_token on a Django form? How could this be leveraged by an attacker?**
+The csrf_token is used for the server to ensure that a request is sent by an authenticated user. If we did not use the csrf_token for the form, the server would not check whether the form data is being submitted by an authenticated user 
+or by an attacker trying to put malicious data into the database. An attacker could levarege a user's authenticated session by submitting forms on their behalf that perform actions that will harm the user, such as transferring funds or 
+changing account details, potentially leading to severe security breaches and data loss.
