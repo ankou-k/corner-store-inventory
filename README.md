@@ -1,4 +1,4 @@
-# Assignment 1
+# Assignment 2
 **PWS link to deployed application**
 https://aleksey-panfilov-cornerstoreinventory.pbp.cs.ui.ac.id/
 
@@ -76,7 +76,7 @@ computer science students already have some familiarity with python, it is easie
 ORM stands for Object-Relational Mapping. It is named that because it maps data between a relational database and an object-oriented 
 language. It aligns the code with the database structures.
 
-# Assignment 2
+# Assignment 3
 **Implementation of part 2**
 1. I created file forms.py in the main directory, I imported Product model from main/models.py and I created a product entry form that allows to add a model object
 2. I opened views.py and made a function that creates a form which automatically saves the data submitted to the form
@@ -122,7 +122,7 @@ XML by ID
 JSON by ID
 ![ScreenShot](postman_json_id.PNG)
 
-# Assignment 3
+# Assignment 4
 **Implementation of part 3**
 1. I imported required libraries in views.py for authorization.
 2. I implemented register function in views.py
@@ -156,3 +156,5 @@ In Django, the user provides their credentials via a login form. The credentials
 
 **How does Django remember logged-in users? Explain other uses of cookies and whether all cookies are safe to use.**
 Django remembers logged-in users by using session cookies; the session is created when the user is authenticated, and stored in the user's browser. This cookie allows Django to associate the user's requests with their session data, hence not requiring them to login again each time they make a request. Cookies are also commonly used for personalization, such as of website language and colours, and for tracking, such as to collect data for marketing and targetted advertisement. Not all cookies are safe to use however; for example, third-party cookies can cause privacy issues since they track a user accross multiple unrelated sites. The cookies can also be hacked if they do not store information securely enough.
+
+# Assignment 5
