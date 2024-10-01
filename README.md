@@ -158,3 +158,25 @@ In Django, the user provides their credentials via a login form. The credentials
 Django remembers logged-in users by using session cookies; the session is created when the user is authenticated, and stored in the user's browser. This cookie allows Django to associate the user's requests with their session data, hence not requiring them to login again each time they make a request. Cookies are also commonly used for personalization, such as of website language and colours, and for tracking, such as to collect data for marketing and targetted advertisement. Not all cookies are safe to use however; for example, third-party cookies can cause privacy issues since they track a user accross multiple unrelated sites. The cookies can also be hacked if they do not store information securely enough.
 
 # Assignment 5
+1. I connected base.html with Tailwind by placing the CDN script from Tailwind into the head section.
+2. I created 2 function in views.py to edit products and delete products, and added imports to help with this.
+3. I created a new html file called edit_product.html in main/templates
+4. I added 2 urls to display the new views into main/url.py
+5. I added edit and delete buttons to each row in the main.html page
+6. I created a navigation bar template in templates/navbar.html and I linked the navbar to the other pages in the application.
+7. I changed the settings.py to allow for static files in the webapp.
+8. I created a global.css and linked it to base.html
+
+**If there are multiple CSS selectors for an HTML element, explain the priority order of these CSS selectors!**
+ID selectors have the highest priority when there are multiple CSS selectors for an HTML element, then class selectors and pseudo-classes (:click), and finally type selectors with lowest priority.
+
+**Why does responsive design become an important concept in web application development? Give examples of applications that have and have not implemented responsive design!**
+Responsive design is an important concept in web application development because it ensures users have a consistent experience no matter what device or screen size they connect to the website with. For example, Notion has effectively implemented responsive design, because the user experience is consistent on any device or screen size. On the other hand, ChatGPT has not implemented it well, as the website UI is really difficult to use on a mobile device.
+
+**Explain the differences between margin, border, and padding, and how to implement these three things!**
+Padding is the space right outside the element's content, the border is a line that surrounds the padding, and margin is the space outside of the border, creating distance between the element and adjacent elements. 
+To implement margins, border, and padding for an element, the code 'margin: 20px', 'border: 1px solid', and 'padding: 20px' can be placed either as in-line css or in a css file in a css selector for that element(s).
+
+**Explain the concepts of flex box and grid layout along with their uses!**
+Flex box is a 1D layout system that allows items to be arranged vertically or horizontally, so it could be used to space out different sections on a website horizontally. Grid layout is a 2D layout system that allows items to be arranged into a table of multiple rows and columns. This can be used for more complex layouts such as a file organization system.
+
