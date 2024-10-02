@@ -18,6 +18,7 @@ def show_main(request):
     inventory = Product.objects.filter(user=request.user)
 
     context = {
+        'npm' : '2406394370',
         'app name' : 'Corner Store Inventory',
         'name' : request.user.username,
         'class' : 'PBP KI',
@@ -95,7 +96,7 @@ def edit_product(request, id):
     # Get product entry based on id
     product = Product.objects.get(pk = id)
 
-    # Set ptoduct entry as an instance of the form
+    # Set product entry as an instance of the form
     form = ProductEntryForm(request.POST or None, instance=product)
 
     if form.is_valid() and request.method == "POST":
