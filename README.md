@@ -180,3 +180,23 @@ To implement margins, border, and padding for an element, the code 'margin: 20px
 **Explain the concepts of flex box and grid layout along with their uses!**
 Flex box is a 1D layout system that allows items to be arranged vertically or horizontally, so it could be used to space out different sections on a website horizontally. Grid layout is a 2D layout system that allows items to be arranged into a table of multiple rows and columns. This can be used for more complex layouts such as a file organization system.
 
+# Assignment 6
+1. I edited login_user function to include javascript
+2. I created new functions in main/views.py that adds a product entry to the db with AJAX
+3. I added URL routing for the function in main/urls.py
+4. I changed the way fetching of products is done in show_xml and show_json
+5. I removed the existing inventory block conditional from main.html, and replaced it with <div id="product_entry_cards"></div>. I then created a script that would fetch these product entries.
+6. I added scripts to main.html to allow for ajax adding of products.
+7. I added strip_tags to ensure my application was protected from harmful javascript executions
+
+**Explain the benefits of using JavaScript in developing web applications!**
+Using Javascript in developing web applications allows for dynamic page manipulation and increasing the amount of interaction with the user. Javascript is needed for creating HTTP cookies, changing the CSS of elements based on certain conditions, displaying information based on certain conditions (such as time), and changing the display based on the type of device used.
+
+**Explain why we need to use await when we call fetch()! What would happen if we don't use await?**
+fetch() is an asynchronous function, which means waiting for the function to return a result is not the default behaviour of this function. Instead, await must be used to tell the code to wait for the fetch() function to finish before continuing with the next part of the code. If await is not used, then the code would continue before the fetch() fuction is fully executed, meaning that the data would not yet be fetched when we are trying to do something with the data, hence causing an error or incorrect behaviour.
+
+**Why do we need to use the csrf_exempt decorator on the view used for AJAX POST?**
+We need to use the csrf_exempt decorator for the AJAX POST view because it tells Django not to check the csrf_token. This is because the AJAX POST does not pass a csrf_token, hence without csrf_exempt we would receive an error about the HTML request being denied. 
+
+**On this week's tutorial, the user input sanitization is done in the back-end as well. Why can't the sanitization be done just in the front-end?**
+The front-end sanitization only cleans data that is meant to be displayed on the app's front-end, however data retrieved as json or xml will not be cleaned in front-end. Therefore, this data can still pose a security risk if not sanitized in the back-end.
